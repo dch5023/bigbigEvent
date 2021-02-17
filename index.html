@@ -5,11 +5,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>首页</title>
+    <link rel="stylesheet" href="./assets/fonts/iconfont.css">
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body>
-    这是首页
-</body>
+
+    <body class="layui-layout-body">
+        <div class="layui-layout layui-layout-admin">
+            <div class="layui-header">
+                <div class="layui-logo">
+                    <img src="../assets/images/logo.png" alt="">
+                </div>
+                <!-- 顶部右侧导航栏 -->
+                <ul class="layui-nav layui-layout-right">
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <!-- 图片头像 -->
+                            <img class="avater" src="./assets/images/sample.jpg" alt="" style="display: none">
+                            <!-- 准备一个默认的字符头像 -->
+                            <span class="text-avater" style="display: none">A</span>
+                            <!-- 欢迎文字 -->
+                            <span class="person-center">个人中心</span>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" target="fm">基本资料</a></dd>
+                            <dd><a href="javascript:;" target="fm">更换头像</a></dd>
+                            <dd><a href="javascript:;" target="fm">重置密码</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="javascript:;" id='logout'><span class="iconfont icon-tuichu"></span>退出</a></li>
+                </ul>
+            </div>
+
+            <div class="layui-side layui-bg-black">
+                <div class="layui-side-scroll">
+                    <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                    <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink='all'>
+                        <li class=" user-info">
+                            <!-- 图片头像 -->
+                            <img class="avater" src="./assets/images/sample.jpg" alt="" style="display: none">
+                            <!-- 准备一个默认的字符头像 -->
+                            <span class="text-avater" style="display: none">A</span>
+                            <!-- 欢迎文字 -->
+                            <span class="nickname" style="display: none">欢迎 xxx</span>
+                        </li>
+                        <li class="layui-nav-item layui-nav-itemed layui-this">
+                            <a class="" href="index.html"><span class="iconfont icon-home"></span>首页</a>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;"><span class="iconfont icon-16"></span>文章管理</a>
+                            <dl class="layui-nav-child">
+                                <!-- target 指定在fm这个iframe范围内打开链接 -->
+                                <dd><a target="fm" href="javascript:;"><i class="layui-icon layui-icon-app"></i>文章类别</a></dd>
+                                <dd><a target="fm" class="jump-list" href="javascript:;"><i class="layui-icon layui-icon-app "></i>文章列表</a></dd>
+                                <dd><a target='fm' class="jump-edit" href="javascript:;"><i class="layui-icon layui-icon-app"></i>发表文章</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:;" target="fm"><i class="layui-icon layui-icon-app"></i>基本资料</a></dd>
+                                <dd><a href="javascript:;" target="fm"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
+                                <dd><a href="javascript:;" target="fm"><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layui-body">
+                <!-- 内容主体区域 -->
+                <iframe name='fm' src="./home/dashboard.html" frameborder="0"></iframe>
+            </div>
+
+            <div class="layui-footer">
+                <!-- 底部固定区域 -->
+                © www.itheima.com - 黑马程序员
+            </div>
+        </div>
+        </div>
+
+
+
+
+        <script src="./assets/lib/axios.js"></script>
+        <script src="./assets/lib/jquery.js"></script>
+        <script src="./assets/lib/layui/layui.all.js"></script>
+        <script src="./assets/js/commonAPI.js"></script>
+        <script src="./assets/js/index.js"></script>
+    </body>
 
 </html>

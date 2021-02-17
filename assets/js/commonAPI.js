@@ -28,13 +28,13 @@ axios.interceptors.request.use(function(config) {
 axios.interceptors.response.use(function(response) {
     // console.log('-------接收ajax响应前');
     // 先判断身份验证是否成功
-    // const { message, status } = response.data
-    // if (message == '身份认证失败！' && status == 1) {
-    //     // 清除本地存储的token
-    //     localStorage.removeItem('token')
-    //         // 跳转到登录页
-    //     location.href = '../../login.html'
-    // }
+    const { message, status } = response.data
+    if (message == '身份认证失败！' && status == 1) {
+        // 清除本地存储的token
+        localStorage.removeItem('token')
+            // 跳转到登录页
+        location.href = '../../login.html'
+    }
 
 
 

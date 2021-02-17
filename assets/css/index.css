@@ -1,0 +1,69 @@
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.layui-body {
+    overflow: hidden;
+}
+
+.iconfont,
+.layui-icon {
+    margin-right: 10px;
+}
+
+.layui-side .layui-nav-child dd {
+    padding-left: 14px;
+}
+
+.user-info {
+    height: 60px;
+    line-height: 60px !important;
+    text-align: center;
+}
+
+.avater {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.layui-nav-bar {
+    top: 60px;
+}
+
+.text-avater {
+    display: inline-block;
+    /* 文字以图片的中线对齐 */
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #009688;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.nickname {
+    font-size: 12px;
+    margin-left: 14px;
+}
+
+.person-center {
+    margin-left: 10px;
+}
+
+.layui-footer {
+    text-align: center;
+    font-size: 12px;
+}
